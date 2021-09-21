@@ -1,0 +1,26 @@
+// Create a String request using Volley Library
+  
+String url = "https:// corona.lmao.ninja/v2/all";
+  
+StringRequest request
+    = new StringRequest(
+        Request.Method.GET,
+        url,
+        new Response.Listener() {
+            @Override
+            public void onResponse(
+                String response)
+            {
+            }
+        },
+        new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(
+                VolleyError error)
+            {
+            }
+        });
+  
+RequestQueue requestQueue
+    = Volley.newRequestQueue(this);
+requestQueue.add(request);
